@@ -1,0 +1,11 @@
+@mixin break($breakpoint) {
+  @media screen and (max-width: $breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media screen and (hover: hover) {
+    @content;
+  }
+}

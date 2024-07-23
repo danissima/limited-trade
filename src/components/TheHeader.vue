@@ -40,7 +40,7 @@ const navigation = [
   </header>
 </template>
 
-<style>
+<style lang="scss">
 .header {
   position: absolute;
   top: 0;
