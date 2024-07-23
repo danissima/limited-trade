@@ -67,7 +67,22 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 30px;
+  line-height: 35.22px;
+  letter-spacing: -0.04em;
+
+  @include break($lg) {
+    font-size: 20px;
+    line-height: 23.48px;
+  }
+}
+
 .section {
+  &_lighter {
+    background-color: $dark-80;
+  }
+
   &__title {
     margin-bottom: 60px;
 
