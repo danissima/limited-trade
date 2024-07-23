@@ -27,6 +27,7 @@ import AppButton from '@/components/AppButton.vue'
     align-items: center;
     margin: 0 auto;
     width: 100%;
+    height: 960px;
     max-width: 875px;
     text-align: center;
 
