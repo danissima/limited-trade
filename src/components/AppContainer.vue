@@ -12,6 +12,7 @@
   padding: 0 50px;
 
   @include break($lg) {
+    max-width: $md;
     padding: 0 28px;
   }
 }

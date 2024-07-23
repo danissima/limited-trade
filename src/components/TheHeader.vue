@@ -79,8 +79,14 @@ const navigation = [
     font-size: 14px;
     line-height: 16.44px;
 
-    &:hover {
-      color: $primary;
+    @include hover {
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &:active {
+      color: $dark-30;
     }
 
     & + & {
@@ -89,6 +95,8 @@ const navigation = [
   }
 
   @include break($lg) {
+    padding-top: 24px;
+
     &__logo {
       img {
         height: 24px;
@@ -100,6 +108,9 @@ const navigation = [
     }
 
     &__link {
+      font-size: 12px;
+      line-height: 14.09px;
+
       & + & {
         margin-left: 20px;
       }

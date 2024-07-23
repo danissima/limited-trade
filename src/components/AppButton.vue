@@ -56,14 +56,52 @@ const classes = computed(() => {
   &_outline {
     border: 1px solid rgba($white, .2);
 
-    &:hover {
-      border-color: $white;
+    @include hover {
+      &:hover {
+        border-color: $white;
+      }
+    }
+
+    &:active {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+
+  &_secondary {
+    background-color: $white;
+    color: $dark-50;
+
+    @include hover {
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+
+    &:active {
+      background-color: darken($primary, 10%);
+      color: $white;
     }
   }
 
   &_small {
     font-size: 14px;
     line-height: 16.44px;
+  }
+
+  &_large {
+    padding: 30px 80px;
+    font-size: 20px;
+    line-height: 23.48px;
+  }
+
+  @include break($lg) {
+    &_large {
+      padding: 24px 48px;
+      font-size: 16px;
+      line-height: 18.78px;
+    }
   }
 }
 </style>
