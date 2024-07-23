@@ -1,17 +1,37 @@
 <script setup>
 import AppContainer from '@/components/AppContainer.vue'
 import AppButton from '@/components/AppButton.vue'
+import HeroStat from '@/components/HeroStat.vue'
+
+const stats = [
+  {
+    amount: '35 +',
+    description: 'Highly qualified experts in sales, logistics and marketing',
+  },
+  {
+    amount: '10 +',
+    description: 'Formal distribution agreements',
+  },
+  {
+    amount: '1 000 +',
+    description: 'Over a thousand product suppliers working with us',
+  },
+]
 </script>
 
 <template>
   <section class="hero">
     <AppContainer>
       <div class="hero__content">
-        <h1>Full range of&nbsp;distribution&nbsp;services for&nbsp;manufacturers and startups from Europe and&nbsp;Asia</h1>
+        <h1>Full range of&nbsp;distribution&nbsp;services for&nbsp;manufacturers and startups from Europe and&nbsp;Asia
+        </h1>
         <p>Organise the expansion of your business into new markets</p>
         <AppButton size="large" kind="secondary" href="#contacts" is-link>
           Get a commercial offer
         </AppButton>
+      </div>
+      <div class="hero__stats">
+        <HeroStat v-for="stat in stats" :key="stat.description" :info="stat" />
       </div>
     </AppContainer>
   </section>
@@ -38,19 +58,35 @@ import AppButton from '@/components/AppButton.vue'
     }
   }
 
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
   @include break($lg) {
     padding-top: 78px;
 
-    p {
-      margin: 20px 0 30px;
-      max-width: 220px;
-      font-size: 14px;
-      line-height: 19.6px;
+    &__content {
+      height: 500px;
+
+      p {
+        margin: 20px 0 30px;
+        max-width: 220px;
+        font-size: 14px;
+        line-height: 19.6px;
+      }
     }
 
     .button {
       width: 100%;
     }
+
+    &__stats {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
+
 }
 </style>
