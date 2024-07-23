@@ -1,13 +1,11 @@
 <script setup>
+import TheHeader from '@/components/TheHeader.vue'
 </script>
 
 <template>
-  <header>
-  </header>
-
+  <TheHeader />
   <main>
   </main>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -21,6 +21,8 @@
     'Helvetica Neue',
     sans-serif;
   --font-primary: 'Raleway', var(--font-fallback);
+
+  --transition: .2s ease-in-out;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -33,13 +35,16 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-weight: normal;
 }
 
 body {
+  position: relative;
   background-color: var(--color-dark-100);
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: -2%;
   font-family: var(--font-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -50,4 +55,13 @@ body {
 button {
   font-family: var(--font-primary);
   font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
