@@ -1,18 +1,19 @@
 <script setup>
 import AppContainer from '@/components/AppContainer.vue'
+import AppButton from '@/components/AppButton.vue'
 
 const navigation = [
   {
     name: 'History',
-    anchor: '',
+    anchor: 'history',
   },
   {
     name: 'Benefits',
-    anchor: '',
+    anchor: 'benefits',
   },
   {
     name: 'Partners',
-    anchor: '',
+    anchor: 'partners',
   },
 ]
 </script>
@@ -35,6 +36,9 @@ const navigation = [
             </li>
           </ul>
         </nav>
+        <AppButton class="header__contact" size="small" kind="outline" is-link href="#contact">
+          Contact
+        </AppButton>
       </div>
     </AppContainer>
   </header>
@@ -47,37 +51,63 @@ const navigation = [
   left: 0;
   width: 100%;
   padding-top: 40px;
-}
 
-.header__content,
-.header__logo,
-.header__nav ul {
-  display: flex;
-  align-items: center;
-}
+  &__content,
+  &__logo,
+  &__nav ul {
+    display: flex;
+    align-items: center;
+  }
 
-.header__content {
-  justify-content: space-between;
-}
+  &__content {
+    justify-content: space-between;
+  }
 
-.header__logo img {
-  height: 50px;
-  margin-right: 20px;
-}
+  &__logo {
+    img {
+      height: 50px;
+      margin-right: 20px;
+    }
 
-.header__logo span {
-  line-height: 19.2px;
-}
+    span {
+      line-height: 19.2px;
+    }
+  }
 
-.header__link {
-  transition: color var(--transition);
-}
+  &__link {
+    transition: color $transition;
+    font-size: 14px;
+    line-height: 16.44px;
 
-.header__link:hover {
-  color: var(--color-primary)
-}
+    &:hover {
+      color: $primary;
+    }
 
-.header__link + .header__link {
-  margin-left: 60px;
+    & + & {
+      margin-left: 60px;
+    }
+  }
+
+  @include break($lg) {
+    &__logo {
+      img {
+        height: 24px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    &__link {
+      & + & {
+        margin-left: 20px;
+      }
+    }
+
+    &__contact {
+      display: none;
+    }
+  }
 }
 </style>
