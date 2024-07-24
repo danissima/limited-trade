@@ -21,12 +21,14 @@ const stats = [
 
 <template>
   <section class="hero">
+    <div class="hero__bg" />
     <AppContainer>
       <div class="hero__content">
-        <h1>Full range of&nbsp;distribution&nbsp;services for&nbsp;manufacturers and startups from Europe and&nbsp;Asia
+        <h1>
+          Full range of&nbsp;distribution&nbsp;services for&nbsp;manufacturers and startups from Europe and&nbsp;Asia
         </h1>
         <p>Organise the expansion of your business into new markets</p>
-        <AppButton size="large" kind="secondary" href="#contacts" is-link>
+        <AppButton size="large" kind="secondary" href="#contact" is-link>
           Get a commercial offer
         </AppButton>
       </div>
@@ -39,7 +41,34 @@ const stats = [
 
 <style lang="scss">
 .hero {
-  padding-top: 180px;
+  --padding-top: 180px;
+  --content-height: 960px;
+  position: relative;
+  padding-top: var(--padding-top);
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--content-height) + var(--padding-top));
+    background-image: url('/images/bg-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:  linear-gradient(to bottom, transparent 75%, $dark-100 100%);
+    }
+  }
 
   &__content {
     display: flex;
@@ -47,7 +76,7 @@ const stats = [
     align-items: center;
     margin: 0 auto;
     width: 100%;
-    height: 960px;
+    height: var(--content-height);
     max-width: 875px;
     text-align: center;
 
@@ -65,10 +94,14 @@ const stats = [
   }
 
   @include break($lg) {
-    padding-top: 78px;
+    --content-height: auto;
+
+    &__bg {
+      height: 800px;
+    }
 
     &__content {
-      height: 500px;
+      margin-bottom: 186px;
 
       p {
         margin: 20px 0 30px;
@@ -88,5 +121,12 @@ const stats = [
     }
   }
 
+  @include break($md) {
+    --padding-top: 78px;
+
+    &__bg {
+      background-image: url('/images/bg-mobile.jpg');
+    }
+  }
 }
 </style>
