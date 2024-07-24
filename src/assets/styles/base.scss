@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   background-color: $dark-100;
