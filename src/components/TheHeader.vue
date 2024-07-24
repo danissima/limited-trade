@@ -32,7 +32,7 @@ const navigation = [
         <nav class="header__nav">
           <ul>
             <li v-for="item in navigation" :key="item.name" class="header__link">
-              <a :href="`#${item.anchor}`">{{ item.name }}</a>
+              <a class="link" :href="`#${item.anchor}`">{{ item.name }}</a>
             </li>
           </ul>
         </nav>
@@ -75,20 +75,6 @@ const navigation = [
   }
 
   &__link {
-    transition: color $transition;
-    font-size: 14px;
-    line-height: 16.44px;
-
-    @include hover {
-      &:hover {
-        color: $primary;
-      }
-    }
-
-    &:active {
-      color: $dark-30;
-    }
-
     & + & {
       margin-left: 60px;
     }

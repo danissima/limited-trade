@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection.vue'
 import HistorySection from '@/components/HistorySection.vue'
 import BenefitsSection from '@/components/BenefitsSection.vue'
 import PartnersSection from '@/components/PartnersSection.vue'
+import TheFooter from '@/components/TheFooter.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import PartnersSection from '@/components/PartnersSection.vue'
     <HistorySection />
     <BenefitsSection />
     <PartnersSection />
+    <TheFooter />
   </main>
 </template>
 

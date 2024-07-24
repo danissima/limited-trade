@@ -78,6 +78,22 @@ h3 {
   }
 }
 
+.link {
+  transition: color $transition;
+  font-size: 14px;
+  line-height: 16.44px;
+
+  @include hover {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &:active {
+    color: $dark-30;
+  }
+}
+
 .section {
   &_lighter {
     background-color: $dark-80;
