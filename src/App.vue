@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection.vue'
 import HistorySection from '@/components/HistorySection.vue'
 import BenefitsSection from '@/components/BenefitsSection.vue'
 import PartnersSection from '@/components/PartnersSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
 import TheFooter from '@/components/TheFooter.vue'
 </script>
 
@@ -14,8 +15,9 @@ import TheFooter from '@/components/TheFooter.vue'
     <HistorySection />
     <BenefitsSection />
     <PartnersSection />
-    <TheFooter />
+    <ContactSection />
   </main>
+  <TheFooter />
 </template>
 
 <style scoped></style>

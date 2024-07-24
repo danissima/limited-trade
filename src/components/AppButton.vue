@@ -85,9 +85,30 @@ const classes = computed(() => {
     }
   }
 
+  &_primary {
+    background-color: $primary;
+    color: $white;
+
+    @include hover {
+      &:hover {
+        background-color: lighten($primary, 10%);
+      }
+    }
+
+    &:active {
+      background-color: darken($primary, 10%);
+    }
+  }
+
   &_small {
     font-size: 14px;
     line-height: 16.44px;
+  }
+
+  &_medium {
+    padding: 30px 64px;
+    font-size: 16px;
+    line-height: 18.78px;
   }
 
   &_large {
