@@ -49,54 +49,54 @@ const classes = computed(() => {
 .button {
   border-radius: 10px;
   padding: 20px 40px;
-  transition: color $transition, border-color $transition, background-color $transition;
+  transition: color var(--transition), border-color var(--transition), background-color var(--transition);
   letter-spacing: -0.01em;
   font-weight: 700;
 
   &_outline {
-    border: 1px solid rgba($white, .2);
+    border: 1px solid var(--color-white-alpha-20);
 
     @include hover {
       &:hover {
-        border-color: $white;
+        border-color: var(--color-white);
       }
     }
 
     &:active {
-      border-color: $primary;
-      color: $primary;
+      border-color: var(--color-primary);
+      color: var(--color-primary);
     }
   }
 
   &_secondary {
-    background-color: $white;
-    color: $dark-50;
+    background-color: var(--color-white);
+    color: var(--color-dark-50);
 
     @include hover {
       &:hover {
-        background-color: $primary;
-        color: $white;
+        background-color: var(--color-primary);
+        color: var(--color-white);
       }
     }
 
     &:active {
-      background-color: darken($primary, 10%);
-      color: $white;
+      background-color: var(--color-primary-darken-10);
+      color: var(--color-white);
     }
   }
 
   &_primary {
-    background-color: $primary;
-    color: $white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 
     @include hover {
       &:hover {
-        background-color: lighten($primary, 10%);
+        background-color: var(--color-primary-lighten-10);
       }
     }
 
     &:active {
-      background-color: darken($primary, 10%);
+      background-color: var(--color-primary-darken-10);
     }
   }
 

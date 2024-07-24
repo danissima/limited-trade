@@ -16,17 +16,17 @@ defineProps({
 
 <style lang="scss">
 .hero-stat {
-  border: 1px solid $dark-30;
-  border-radius: $radius;
+  border: 1px solid var(--color-dark-30);
+  border-radius: var(--radius);
   padding: 35px 40px 40px;
-  background-color: $dark-80;
+  background-color: var(--color-dark-80);
 
   &__number {
     margin-bottom: 10px;
     font-size: 60px;
     line-height: 70.44px;
     letter-spacing: -0.04em;
-    color: $primary;
+    color: var(--color-primary);
   }
 
   &__description {

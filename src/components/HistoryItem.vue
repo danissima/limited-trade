@@ -22,10 +22,10 @@ defineProps({
 
   &__period {
     margin-bottom: 30px;
-    box-shadow: 0 0 0 20px $dark-100;
+    box-shadow: 0 0 0 20px var(--color-dark-100);
     border-radius: 50px;
     padding: 20px 30px;
-    background-color: $primary;
+    background-color: var(--color-primary);
     font-size: 22px;
     line-height: 22px;
   }

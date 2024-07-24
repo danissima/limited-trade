@@ -28,10 +28,10 @@ defineProps({
     justify-content: center;
     align-items: center;
     margin-bottom: 28px;
-    box-shadow: 0 0 0 8px rgba($primary, .3);
+    box-shadow: 0 0 0 8px var(--color-primary-alpha-30);
     border-radius: 50%;
     padding: 14px;
-    background-color: $primary;
+    background-color: var(--color-primary);
   }
 
   &__title {
@@ -42,13 +42,13 @@ defineProps({
     margin-top: 20px;
     font-size: 14px;
     line-height: 21px;
-    color: rgba($white, .7);
+    color: var(--color-white-alpha-70);
   }
 
   @include break($lg) {
     &__icon {
       margin-bottom: 26px;
-      box-shadow: 0 0 0 6px rgba($primary, .3);
+      box-shadow: 0 0 0 6px var(--color-primary-alpha-30);
       padding: 10px;
 
       svg {

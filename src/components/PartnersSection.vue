@@ -85,8 +85,8 @@ const [emblaRef] = emblaCarouselVue({
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $dark-100;
-    border-radius: $radius;
+    background-color: var(--color-dark-100);
+    border-radius: var(--radius);
     height: 168px;
     padding: 0 20px;
 

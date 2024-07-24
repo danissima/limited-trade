@@ -46,14 +46,14 @@ defineProps({
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid $dark-30;
-    border-radius: $radius;
+    border: 1px solid var(--color-dark-30);
+    border-radius: var(--radius);
     padding: 4px;
-    background-color: $dark-80;
+    background-color: var(--color-dark-80);
 
     svg {
       opacity: 0;
-      transition: opacity $transition, color $transition;
+      transition: opacity var(--transition), color var(--transition);
     }
   }
 
@@ -65,7 +65,7 @@ defineProps({
 
   &__input:checked ~ &__checkmark svg {
     opacity: 1;
-    color: $primary;
+    color: var(--color-primary);
   }
 
   &__label > span {

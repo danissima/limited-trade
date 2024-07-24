@@ -11,27 +11,27 @@
 .input {
   &__field {
     outline: none;
-    border: 1px solid $dark-30;
-    border-radius: $radius;
+    border: 1px solid var(--color-dark-30);
+    border-radius: var(--radius);
     width: 100%;
     padding: 30px;
-    background-color: $dark-80;
-    transition: border-color $transition;
+    background-color: var(--color-dark-80);
+    transition: border-color var(--transition);
     font-size: 16px;
     line-height: 18.78px;
     letter-spacing: -0.02em;
-    color: $white;
+    color: var(--color-white);
 
     &::placeholder {
-      color: rgba($white, .4);
+      color: var(--color-white-alpha-40);
     }
 
     &:hover {
-      border-color: $white;
+      border-color: var(--color-white);
     }
 
     &:focus{
-      border-color: $primary;
+      border-color: var(--color-primary);
     }
   }
 }

@@ -52,7 +52,7 @@ const periods = [
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: $dark-30;
+      background-color: var(--color-dark-30);
       display: block;
     }
   }
@@ -63,7 +63,7 @@ const periods = [
     max-width: 250px;
 
     &:last-child {
-      background-color: $dark-100;
+      background-color: var(--color-dark-100);
     }
 
     & + & {

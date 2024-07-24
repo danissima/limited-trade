@@ -20,9 +20,9 @@ import AppContainer from '@/components/AppContainer.vue'
 
 <style lang="scss">
 .footer {
-  border-top: 1px solid $dark-30;
+  border-top: 1px solid var(--color-dark-30);
   padding: 60px 0;
-  background-color: $dark-80;
+  background-color: var(--color-dark-80);
 
   &__content,
   &__logo,
