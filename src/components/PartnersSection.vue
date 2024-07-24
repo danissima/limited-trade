@@ -4,35 +4,27 @@ import emblaCarouselVue from 'embla-carousel-vue'
 
 const partners = [
   {
-    imageSrc: '/images/partners/partner-1.png',
     height: 48,
   },
   {
-    imageSrc: '/images/partners/partner-2.png',
     height: 55,
   },
   {
-    imageSrc: '/images/partners/partner-3.png',
     height: 48,
   },
   {
-    imageSrc: '/images/partners/partner-4.png',
     height: 65,
   },
   {
-    imageSrc: '/images/partners/partner-5.png',
     height: 50,
   },
   {
-    imageSrc: '/images/partners/partner-6.png',
     height: 80,
   },
   {
-    imageSrc: '/images/partners/partner-7.png',
     height: 55,
   },
   {
-    imageSrc: '/images/partners/partner-8.png',
     height: 60,
   },
 ]
@@ -42,6 +34,9 @@ const [emblaRef] = emblaCarouselVue({
     '(min-width: 768px)': { active: false },
   },
 })
+
+const glob = import.meta.glob('@/assets/images/partners/*.png', { eager: true})
+const images = Object.entries(glob).map(([key, value]) => value.default)
 </script>
 
 <template>
@@ -52,9 +47,9 @@ const [emblaRef] = emblaCarouselVue({
       </h2>
       <div ref="emblaRef" class="partners__grid">
         <div class="partners__wrapper">
-          <div v-for="partner in partners" :key="partner.imageSrc" class="partners__slide">
+          <div v-for="(partner, index) in partners" :key="partner.imageSrc" class="partners__slide">
             <div class="partners__item">
-              <img :src="partner.imageSrc" alt="Partner logo" :height="partner.height">
+              <img :src="images[index]" alt="Partner logo" :height="partner.height">
             </div>
           </div>
         </div>
